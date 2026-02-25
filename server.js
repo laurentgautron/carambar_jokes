@@ -12,7 +12,7 @@ const startserver = async () => {
             .then(() => console.log('BDD synchronisée'))
             .catch(error => console.log(`La BDD n'est pas synchronisée: ${error}`));
 
-        app.listen(port, () => console.log(`Serveur démarré sur http://localhost:${port}/api/v1/jokes`));
+        app.listen(port, "0.0.0.0", () => console.log(`Serveur démarré sur le port ${port}`));
     } catch (error) {
         console.log(`Le serveur n'a pas démarré: ${error}`);
     }
